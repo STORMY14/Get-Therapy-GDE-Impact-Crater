@@ -1,2 +1,2 @@
-# Get-Therapy-GDE-Impact-Crater
+# Get-Therapy-GDE-Impact-Crater-Studio
 For Get Therapy game development
