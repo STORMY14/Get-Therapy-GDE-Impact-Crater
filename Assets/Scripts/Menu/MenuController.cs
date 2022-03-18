@@ -40,10 +40,12 @@ public class MenuController : MonoBehaviour
         {
             if (touchInput == TouchType.SwipeLeft)
             {
+                FindObjectOfType<AudioManager>().PlaySound("page_left");
                 moveClipboardLeft();
             }
             else if (touchInput == TouchType.SwipeRight)
             {
+                FindObjectOfType<AudioManager>().PlaySound("page_right");
                 moveClipboardRight();
             }
         }

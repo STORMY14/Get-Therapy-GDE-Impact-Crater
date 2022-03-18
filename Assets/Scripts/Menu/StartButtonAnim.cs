@@ -8,6 +8,7 @@ public class StartButtonAnim : MonoBehaviour
 
     public void playStampAnim()
     {
+        FindObjectOfType<AudioManager>().PlaySound("stamp");
         stamp_anim.Play("Stamp");
     }
 
