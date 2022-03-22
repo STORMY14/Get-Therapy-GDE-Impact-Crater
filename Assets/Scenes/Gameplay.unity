@@ -323,7 +323,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 485676678}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 88092c472ce432c44843111b1e8e2b0d, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 51b9b2fbe1efc93439e4dad4a8842da7, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 120039111}
@@ -345,7 +345,7 @@ VideoPlayer:
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 1
-  m_WaitForFirstFrame: 0
+  m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
 --- !u!114 &485676681
@@ -361,11 +361,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   current_patient_mood: 1
-  Red: {fileID: 32900000, guid: fe3097bf37bbf804fa664ad43f705049, type: 3}
-  Green: {fileID: 32900000, guid: 88092c472ce432c44843111b1e8e2b0d, type: 3}
-  RedToGreen: {fileID: 32900000, guid: 177b521a71116364080334719b3b34fc, type: 3}
-  GreenToRed: {fileID: 32900000, guid: 786781913c650af4d8a25a30f0632af5, type: 3}
   vid_player: {fileID: 485676680}
+  time: 0
 --- !u!1 &508104660
 GameObject:
   m_ObjectHideFlags: 0
@@ -1059,7 +1056,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2092005044}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 77.02217, y: 37.549614, z: -10.093756}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
