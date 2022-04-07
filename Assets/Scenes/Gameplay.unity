@@ -292,6 +292,7 @@ GameObject:
   - component: {fileID: 279144491}
   - component: {fileID: 279144489}
   - component: {fileID: 279144490}
+  - component: {fileID: 279144492}
   m_Layer: 0
   m_Name: Thought1
   m_TagString: Untagged
@@ -396,6 +397,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &279144492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 279144487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5107558d77b9084089950d2e3cb04b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &349992248
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,6 +800,7 @@ GameObject:
   - component: {fileID: 776354670}
   - component: {fileID: 776354669}
   - component: {fileID: 776354668}
+  - component: {fileID: 776354667}
   m_Layer: 0
   m_Name: Thought3
   m_TagString: Untagged
@@ -813,6 +827,18 @@ RectTransform:
   m_AnchoredPosition: {x: 306, y: 285}
   m_SizeDelta: {x: 3.4399414, y: 1.4649048}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &776354667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776354665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5107558d77b9084089950d2e3cb04b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!222 &776354668
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -831,7 +857,7 @@ Animator:
   m_GameObject: {fileID: 776354665}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6379c746b48c3074781cffb40ee59f02, type: 2}
+  m_Controller: {fileID: 9100000, guid: 31cca3718c4a6fe48a9f8e2fad65aeba, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1403,7 +1429,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1283557021}
   - component: {fileID: 1283557022}
-  - component: {fileID: 1283557023}
   m_Layer: 0
   m_Name: ThoughtBubbles
   m_TagString: Untagged
@@ -1445,25 +1470,6 @@ MonoBehaviour:
   thought3: {fileID: 776354665}
   ready: 0
   chose: 0
---- !u!95 &1283557023
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1283557020}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9145a00cfc2de384590325c6dccce9cb, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1409958085
 GameObject:
   m_ObjectHideFlags: 0
@@ -1913,6 +1919,7 @@ GameObject:
   - component: {fileID: 1782315505}
   - component: {fileID: 1782315504}
   - component: {fileID: 1782315503}
+  - component: {fileID: 1782315502}
   m_Layer: 0
   m_Name: Thought2
   m_TagString: Untagged
@@ -1939,6 +1946,18 @@ RectTransform:
   m_AnchoredPosition: {x: 70.60001, y: 159.40074}
   m_SizeDelta: {x: 3.4399414, y: 1.4649048}
   m_Pivot: {x: 0.5, y: 0.50000006}
+--- !u!114 &1782315502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782315500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5107558d77b9084089950d2e3cb04b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!222 &1782315503
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1957,7 +1976,7 @@ Animator:
   m_GameObject: {fileID: 1782315500}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6379c746b48c3074781cffb40ee59f02, type: 2}
+  m_Controller: {fileID: 9100000, guid: 43eb36082a5f70e42b5b75a2a4149ed8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

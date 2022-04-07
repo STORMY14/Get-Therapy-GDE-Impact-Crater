@@ -33,8 +33,6 @@ AnimationClip:
       value: {fileID: 21300000, guid: bf5b27f7677e7a4418652912ef6fb91d, type: 3}
     - time: 0.4
       value: {fileID: 21300000, guid: 6404d9293765a3c46862da311ef5e4a7, type: 3}
-    - time: 1
-      value: {fileID: 21300000, guid: dd2dfce962cc5124f83a6c8b537ff0e3, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -61,13 +59,12 @@ AnimationClip:
     - {fileID: 21300000, guid: 21d95378b79a122458bca92146ef0e54, type: 3}
     - {fileID: 21300000, guid: bf5b27f7677e7a4418652912ef6fb91d, type: 3}
     - {fileID: 21300000, guid: 6404d9293765a3c46862da311ef5e4a7, type: 3}
-    - {fileID: 21300000, guid: dd2dfce962cc5124f83a6c8b537ff0e3, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.0166667
+    m_StopTime: 0.4166667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -86,4 +83,11 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.4
+    functionName: PrintEvent
+    data: poppp
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
