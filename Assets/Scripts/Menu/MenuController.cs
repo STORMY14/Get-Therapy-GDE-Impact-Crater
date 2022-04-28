@@ -87,6 +87,7 @@ public class MenuController : MonoBehaviour
     {
         start = true;
         logo_anim.SetTrigger("Slide_Out");
+        FindObjectOfType<AudioManager>().PlaySound("page_left");
         spawnClipboards();
     }
 

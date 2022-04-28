@@ -6,16 +6,16 @@ public class changeSiblingIndex : MonoBehaviour
 
     public void backLeft()
     {
-        clipboard.SetSiblingIndex(1);
+        clipboard.SetSiblingIndex(2);
     }
 
     public void frontMid()
     {
-        clipboard.SetSiblingIndex(4);
+        clipboard.SetSiblingIndex(5);
     }
 
     public void backRight()
     {
-        clipboard.SetSiblingIndex(2);
+        clipboard.SetSiblingIndex(3);
     }
 }
