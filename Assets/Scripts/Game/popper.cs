@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
+using UnityEditor;
 using UnityEditor.UI;
 using UnityEngine;
 
 public class popper : MonoBehaviour
 {
+    public int bubblenum;
     // Start is called before the first frame update
     private SpriteRenderer renderer;
     void Start()
@@ -12,14 +15,9 @@ public class popper : MonoBehaviour
         renderer = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnPress()
     {
-        
-    }
-    
-    public void PrintEvent(Sprite s)
-    {
-        renderer.enabled = false;
+        Debug.Log(bubblenum);
+        GetComponentInParent<ThoughtMaker>().chose = bubblenum;
     }
 }

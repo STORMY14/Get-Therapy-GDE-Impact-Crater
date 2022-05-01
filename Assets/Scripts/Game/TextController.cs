@@ -43,3 +43,6 @@ public class TextController : MonoBehaviour
         }
     }
 }
+
+//getcomponent with the thoughtBubbles and set ready to true every time new text appears?
+//preferably a brief moment after instead.
