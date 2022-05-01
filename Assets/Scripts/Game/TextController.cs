@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,8 +13,13 @@ public class TextController : MonoBehaviour
     //the slider can be set with slider.value
     //it has to be a float, between 0 and 1
 
+    public GameObject thought_controller;
+    
     private float increment;
     private string filenum;
+
+    private string[] route1 = {"1", "1-1", "1-1-1", "1-1-1-1", "1-1-1-1-1"};
+    private string[] route2 = {"2", "2-2", "2-2-2", "2-2-2-2", "2-2-2-2-2"};
 
     void Start()
     {
@@ -29,6 +35,7 @@ public class TextController : MonoBehaviour
             text_display.text = script.text;
             increment =  1.0f / ((script.text.Count() + 4) * 10);
             slider.value = increment;
+            thought_controller.GetComponent<ThoughtMaker>().loaded = true;
         }
         else if (slider.value == 1)
         {
@@ -36,6 +43,7 @@ public class TextController : MonoBehaviour
             slider.value = 0.99f;
             script = Resources.Load<TextAsset>("Text/test"+filenum);
             filenum = "2";
+            thought_controller.GetComponent<ThoughtMaker>().ready = true;
         }
         else
         {

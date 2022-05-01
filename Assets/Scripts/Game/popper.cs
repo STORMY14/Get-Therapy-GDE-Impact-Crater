@@ -17,7 +17,6 @@ public class popper : MonoBehaviour
 
     public void OnPress()
     {
-        Debug.Log(bubblenum);
         GetComponentInParent<ThoughtMaker>().chose = bubblenum;
     }
 }
