@@ -17,14 +17,15 @@ public class TextController : MonoBehaviour
     
     private float increment;
     private string filenum;
+    private int textnum;
 
-    private string[] route1 = {"1", "1-1", "1-1-1", "1-1-1-1", "1-1-1-1-1"};
-    private string[] route2 = {"2", "2-2", "2-2-2", "2-2-2-2", "2-2-2-2-2"};
+    private string[] route1 = {"0", "1", "1-1", "1-1-1", "1-1-1-1", "1-1-1-1-1"};
+    private string[] route2 = {"0", "2", "2-2", "2-2-2", "2-2-2-2", "2-2-2-2-2"};
 
     void Start()
     {
         slider.value = 1f;
-        filenum = "1";
+        textnum = 0;
     }
 
     // Update is called once per frame
@@ -32,17 +33,19 @@ public class TextController : MonoBehaviour
     {
         if (slider.value == 0)
         {
+            script = Resources.Load<TextAsset>("Text/P-"+route1[textnum]);
+            textnum += 1;
             text_display.text = script.text;
-            increment =  1.0f / ((script.text.Count() + 4) * 10);
+            increment =  1.0f / ((script.text.Count() + 3) * 10);
             slider.value = increment;
             thought_controller.GetComponent<ThoughtMaker>().loaded = true;
         }
         else if (slider.value == 1)
         {
-            increment = -0.01f;
-            slider.value = 0.99f;
-            script = Resources.Load<TextAsset>("Text/test"+filenum);
-            filenum = "2";
+            script = Resources.Load<TextAsset>("Text/T-"+route1[textnum]);
+            text_display.text = script.text;
+            increment =  -(1.0f / ((script.text.Count() + 3) * 10));
+            slider.value = 1 + increment;
             thought_controller.GetComponent<ThoughtMaker>().ready = true;
         }
         else
