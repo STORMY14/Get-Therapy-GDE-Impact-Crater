@@ -13,6 +13,7 @@ public class TextController : MonoBehaviour
     //the slider can be set with slider.value
     //it has to be a float, between 0 and 1
 
+    public GameObject thought_maker;
     public GameObject thought_controller;
     
     private float increment;
@@ -38,7 +39,9 @@ public class TextController : MonoBehaviour
             text_display.text = script.text;
             increment =  1.0f / ((script.text.Count() + 3) * 10);
             slider.value = increment;
-            thought_controller.GetComponent<ThoughtMaker>().loaded = true;
+            thought_maker.GetComponent<ThoughtMaker>().loaded = true;
+            thought_controller.GetComponent<ThoughtController>().thoughtnum = route1[textnum-1];
+            thought_controller.GetComponent<ThoughtController>().thoughtload = true;
         }
         else if (slider.value == 1)
         {
@@ -46,7 +49,7 @@ public class TextController : MonoBehaviour
             text_display.text = script.text;
             increment =  -(1.0f / ((script.text.Count() + 3) * 10));
             slider.value = 1 + increment;
-            thought_controller.GetComponent<ThoughtMaker>().ready = true;
+            thought_maker.GetComponent<ThoughtMaker>().ready = true;
         }
         else
         {

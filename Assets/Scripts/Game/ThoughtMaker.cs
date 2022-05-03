@@ -36,6 +36,10 @@ public class ThoughtMaker : MonoBehaviour
         button1 = thought1.GetComponentInChildren<Image>();
         button2 = thought2.GetComponentInChildren<Image>();
         button3 = thought3.GetComponentInChildren<Image>();
+        
+        text1.enabled = true;
+        text2.enabled = true;
+        text3.enabled = true;
     }
 
     // Update is called once per frame
@@ -59,6 +63,9 @@ public class ThoughtMaker : MonoBehaviour
             button1.enabled = true;
             button2.enabled = true;
             button3.enabled = true;
+            text1.enabled = true;
+            text2.enabled = true;
+            text3.enabled = true;
             anim1.SetBool("ready", false);
             anim2.SetBool("ready", false);
             anim3.SetBool("ready", false);
@@ -73,6 +80,9 @@ public class ThoughtMaker : MonoBehaviour
             button1.enabled = false;
             button2.enabled = false;
             button3.enabled = false;
+            text1.enabled = false;
+            text2.enabled = false;
+            text3.enabled = false;
             anim1.SetBool("loaded", false);
             anim2.SetBool("loaded", false);
             anim3.SetBool("loaded", false);
