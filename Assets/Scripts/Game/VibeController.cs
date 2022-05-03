@@ -12,8 +12,11 @@ public class VibeController : MonoBehaviour
 
     [SerializeField] private Animator patient_animator;
     [SerializeField] private Animator therapist_animator;
+
     [SerializeField] private GameObject scribble;
     [SerializeField] private Transform scribble_anchor;
+
+    [SerializeField] private BackgroundController background;
 
     void Start()
     {
@@ -25,6 +28,7 @@ public class VibeController : MonoBehaviour
     {
         updateAnims();
         updateScribble();
+        updateBackground();
     }
 
     void updateAnims()
@@ -38,5 +42,17 @@ public class VibeController : MonoBehaviour
     {
         scribble.transform.localScale = new Vector3(30 - (patient_vibe * 30), 30 - (patient_vibe * 30), 0);
         scribble.transform.position = scribble_anchor.position;
+    }
+
+    void updateBackground()
+    {
+        if (patient_vibe >= 0)
+        {
+            background.current_patient_mood = true;
+        }
+        else
+        {
+            background.current_patient_mood = false;
+        }
     }
 }

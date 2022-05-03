@@ -4259,6 +4259,7 @@ MonoBehaviour:
   therapist_animator: {fileID: 1266039782}
   scribble: {fileID: 187941114}
   scribble_anchor: {fileID: 1137714299}
+  background: {fileID: 485676681}
 --- !u!224 &2013150707
 RectTransform:
   m_ObjectHideFlags: 0
