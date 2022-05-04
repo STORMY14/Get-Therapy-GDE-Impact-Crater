@@ -22,11 +22,13 @@ public class TextController : MonoBehaviour
 
     private string[] route1 = {"0", "1", "1-1", "1-1-1", "1-1-1-1", "1-1-1-1-1"};
     private string[] route2 = {"0", "2", "2-2", "2-2-2", "2-2-2-2", "2-2-2-2-2"};
+    private string[] routeon;
 
     void Start()
     {
         slider.value = 1f;
         textnum = 0;
+        routeon = route1;
     }
 
     // Update is called once per frame
@@ -34,18 +36,18 @@ public class TextController : MonoBehaviour
     {
         if (slider.value == 0)
         {
-            script = Resources.Load<TextAsset>("Text/P-"+route1[textnum]);
+            script = Resources.Load<TextAsset>("Text/P-"+routeon[textnum]);
             textnum += 1;
             text_display.text = script.text;
             increment =  1.0f / ((script.text.Count() + 3) * 10);
             slider.value = increment;
             thought_maker.GetComponent<ThoughtMaker>().loaded = true;
-            thought_controller.GetComponent<ThoughtController>().thoughtnum = route1[textnum-1];
+            thought_controller.GetComponent<ThoughtController>().thoughtnum = routeon[textnum-1];
             thought_controller.GetComponent<ThoughtController>().thoughtload = true;
         }
         else if (slider.value == 1)
         {
-            script = Resources.Load<TextAsset>("Text/T-"+route1[textnum]);
+            script = Resources.Load<TextAsset>("Text/T-"+routeon[textnum]);
             text_display.text = script.text;
             increment =  -(1.0f / ((script.text.Count() + 3) * 10));
             slider.value = 1 + increment;
@@ -55,6 +57,11 @@ public class TextController : MonoBehaviour
         {
             slider.value += increment;
         }
+    }
+    
+    public void SwitchRoute()
+    {
+        routeon = route2;
     }
 }
 

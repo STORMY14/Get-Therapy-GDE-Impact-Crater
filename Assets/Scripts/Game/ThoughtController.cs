@@ -26,7 +26,7 @@ public class ThoughtController : MonoBehaviour
     {
         if (thoughtload)
         {
-            Debug.Log("Text/S-"+thoughtnum+"-1");
+            Debug.Log(thoughtnum);
             line1 = Resources.Load<TextAsset>("Text/S-"+thoughtnum+"-1");
             line2 = Resources.Load<TextAsset>("Text/S-"+thoughtnum+"-2");
             line3 = Resources.Load<TextAsset>("Text/S-"+thoughtnum+"-3");
