@@ -55,4 +55,16 @@ public class VibeController : MonoBehaviour
             background.current_patient_mood = false;
         }
     }
+
+    public void goodVibes()
+    {
+        patient_vibe += 0.3f;
+        patient_vibe = Mathf.Clamp(patient_vibe, -1, 1);
+    }
+
+    public void badVibes()
+    {
+        patient_vibe -= 0.3f;
+        patient_vibe = Mathf.Clamp(patient_vibe, -1, 1);
+    }
 }
