@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -61,7 +59,6 @@ public class ThoughtMaker : MonoBehaviour
         }
         if (loaded)
         {
-            Debug.Log("LOADED");
             vibeCheck.is_therapist_listening = true;
             vibeCheck.is_patient_listening = false;
             ready = false;
