@@ -24,6 +24,9 @@ public class ThoughtMaker : MonoBehaviour
     public bool ready = false;
     public bool loaded = false;
     public int chose = 0;
+
+    [SerializeField] private VibeController vibeCheck;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -37,9 +40,9 @@ public class ThoughtMaker : MonoBehaviour
         button2 = thought2.GetComponentInChildren<Image>();
         button3 = thought3.GetComponentInChildren<Image>();
         
-        text1.enabled = true;
-        text2.enabled = true;
-        text3.enabled = true;
+        //text1.enabled = true;
+        //text2.enabled = true;
+        //text3.enabled = true;
     }
 
     // Update is called once per frame
@@ -47,6 +50,8 @@ public class ThoughtMaker : MonoBehaviour
     {
         if (ready)
         {
+            vibeCheck.is_therapist_listening = false;
+            vibeCheck.is_patient_listening = true;
             thought1.GetComponent<Renderer>().enabled = true;
             thought2.GetComponent<Renderer>().enabled = true;
             thought3.GetComponent<Renderer>().enabled = true;
@@ -56,6 +61,9 @@ public class ThoughtMaker : MonoBehaviour
         }
         if (loaded)
         {
+            Debug.Log("LOADED");
+            vibeCheck.is_therapist_listening = true;
+            vibeCheck.is_patient_listening = false;
             ready = false;
             anim1.SetBool("loaded", true);
             anim2.SetBool("loaded", true);
@@ -63,9 +71,9 @@ public class ThoughtMaker : MonoBehaviour
             button1.enabled = true;
             button2.enabled = true;
             button3.enabled = true;
-            text1.enabled = true;
-            text2.enabled = true;
-            text3.enabled = true;
+            //text1.enabled = true;
+            //text2.enabled = true;
+            //text3.enabled = true;
             anim1.SetBool("ready", false);
             anim2.SetBool("ready", false);
             anim3.SetBool("ready", false);
